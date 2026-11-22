@@ -15,7 +15,11 @@
 <header class="header">
   <div class="wrap header-inner">
     <a href="#top" aria-label="Леля — начало страницы"><img class="logo" src="assets/logo-header.png" alt="Леля"></a>
-    <nav aria-label="Основное меню"><a href="#about">О&nbsp;нас</a><a href="assortment.html">Ассортимент</a><a href="terms.html">Условия сотрудничества</a></nav>
+    <nav class="desktop-menu" aria-label="Основное меню"><a href="about.html">О&nbsp;нас</a><a href="assortment.html">Ассортимент</a><a href="terms.html">Условия сотрудничества</a><a href="benefits.html">Наши преимущества</a></nav>
+    <details class="mobile-menu">
+      <summary aria-label="Меню"><span aria-hidden="true"></span></summary>
+      <nav aria-label="Основное меню"><a href="about.html">О&nbsp;нас</a><a href="assortment.html">Ассортимент</a><a href="terms.html">Условия сотрудничества</a><a href="benefits.html">Наши преимущества</a></nav>
+    </details>
     <a class="button small" href="#contact">Запросить прайс</a>
   </div>
 </header>
@@ -95,7 +99,7 @@
   </section>
   <section id="assortment" class="assortment section" aria-labelledby="assortment-title">
     <div class="wrap">
-      <div class="assortment-heading"><h2 id="assortment-title">Широкий ассортимент</h2><a href="assortment.html">Открыть витрину</a></div>
+      <div class="assortment-heading"><h2 id="assortment-title">Широкий ассортимент</h2><a class="button button-light" href="assortment.html">Открыть витрину</a></div>
       <div class="assortment-grid">
         <article class="assortment-card">
           <img src="assets/assortment/hair.jpg" width="508" height="337" loading="lazy" decoding="async" alt="">
@@ -151,20 +155,9 @@
     <div class="brand-story-copy">
       <h2 id="trust-title">Партнёрство, которое начинается с&nbsp;доверия</h2>
       <p>На&nbsp;связи от&nbsp;подбора первой закупки до&nbsp;получения товара. Подскажем, как пополнить ассортимент с&nbsp;учётом ваших продаж.</p>
-      <a href="#steps-title">Как проходит первая закупка</a>
+      <a class="button button-light" href="terms.html#steps-title">Как проходит первая закупка</a>
     </div>
     <img src="assets/partner-shipping.jpg" alt="Упаковка заказа в фирменную коробку «Леля»" loading="lazy" width="1774" height="887">
-  </section>
-  <section class="wrap section" aria-labelledby="steps-title">
-    <h2 id="steps-title">Как начать сотрудничество</h2>
-    <ol class="partner-steps">
-      <li><strong>Оставьте заявку</strong><p>Расскажите о&nbsp;вашем проекте.</p></li>
-      <li><strong>Получите консультацию</strong><p>Пришлём прайс и&nbsp;ответим на&nbsp;вопросы.</p></li>
-      <li><strong>Подберём ассортимент</strong><p>Учтём бюджет и&nbsp;формат продаж.</p></li>
-      <li><strong>Согласуем доставку</strong><p>Подберём транспортную компанию.</p></li>
-      <li><strong>Подготовим заказ</strong><p>Соберём продукцию и&nbsp;документы.</p></li>
-      <li><strong>Поможем с&nbsp;повторной закупкой</strong><p>Подберём позиции с&nbsp;учётом спроса.</p></li>
-    </ol>
   </section>
   <section id="contact" class="contact section" aria-labelledby="contact-title">
     <div class="wrap split">

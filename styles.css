@@ -200,9 +200,9 @@ h3 { font-size: 1.2rem; line-height: 1.25; }
 .timeline article { padding: 1rem 0; border-top: 1px solid var(--line); }
 .timeline p { margin-bottom: 0; }
 .terms-page { display: grid; gap: var(--section-gap); }
-.terms-intro { display: grid; gap: .75rem; max-width: 52rem; }
+.terms-intro { display: grid; gap: .75rem; }
 .terms-title { margin: 0; font-size: clamp(2.35rem, 5vw, 4.5rem); }
-.terms-intro p { max-width: 34rem; margin: 0; }
+.terms-intro p { margin: 0; }
 .terms-steps {
   display: grid;
   grid-template-columns: minmax(11rem, 1fr) minmax(0, 3fr);

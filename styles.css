@@ -167,15 +167,15 @@ h3 { font-size: 1.2rem; line-height: 1.25; }
 .catalog-tools[hidden], .catalog-grid [hidden], #catalog-more[hidden] { display: none; }
 .catalog-filters button {
   padding: .5rem .9rem;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: 2rem;
-  background: var(--white);
+  background: transparent;
   color: var(--ink);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
-.catalog-filters button:hover { border-color: var(--green); }
+.catalog-filters button[aria-pressed="false"]:is(:hover, :focus-visible) { background: var(--mist); }
 .catalog-filters button[aria-pressed="true"] { border-color: var(--green); background: var(--green); color: var(--white); }
 .catalog-card-copy { padding: 1rem 1.25rem; }
 .catalog-card-copy h2 { margin: 0; color: var(--ink); font: 500 1rem/1.3 Manrope, system-ui, sans-serif; letter-spacing: normal; }

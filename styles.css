@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Milelya;
+  src: url("assets/Milelya.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
 :root {
   --ink: #222222;
   --green: #297339;
@@ -10,6 +18,7 @@
   --field-line: #4a4a4a;
   --error-ink: #822929;
   --error-background: #f9f2ef;
+  --heading-font: Milelya, Manrope, system-ui, sans-serif;
   color: var(--ink);
   background: var(--cream);
   font: 100%/1.5 Manrope, system-ui, sans-serif;
@@ -22,12 +31,10 @@ a { color: var(--deep); text-underline-offset: .23em; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
 p { margin: 0 0 .85rem; }
-h1, h2, h3 { margin: 0 0 .75rem; line-height: 1.14; color: var(--deep); }
-h3 { line-height: 1.25; }
-h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
-h1 { font-size: clamp(2.9rem, 6vw, 5.6rem); letter-spacing: -.045em; }
-h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing: -.035em; }
-h3 { font-size: 1.2rem; }
+h1, h2, h3 { margin: 0 0 .75rem; font-family: var(--heading-font); font-weight: 500; line-height: 1.1; letter-spacing: -.3px; color: var(--deep); }
+h1 { font-size: clamp(2.9rem, 6vw, 5.6rem); }
+h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); }
+h3 { font-size: 1.2rem; line-height: 1.25; }
 .wrap { width: min(76rem, calc(100% - 3rem)); margin-inline: auto; }
 .section { padding-block: clamp(3rem, 7vw, 6.5rem); }
 .skip { position: absolute; top: .5rem; left: .5rem; transform: translateY(-200%); padding: .6rem; background: white; z-index: 2; }
@@ -103,7 +110,7 @@ h3 { font-size: 1.2rem; }
 .facts div { padding: .65rem 1rem; }
 .facts div + div { border-left: 1px solid var(--line); }
 .facts strong, .facts span { display: block; }
-.facts strong { font-family: Georgia, serif; font-weight: 400; font-size: clamp(1.4rem, 3vw, 2.4rem); color: var(--deep); }
+.facts strong { font-family: var(--heading-font); font-weight: 500; font-size: clamp(1.4rem, 3vw, 2.4rem); color: var(--deep); }
 .facts span { font-size: .92rem; }
 .partner-copy, .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 5vw, 5rem); }
 .partner-copy { align-items: start; }
@@ -142,7 +149,7 @@ h3 { font-size: 1.2rem; }
   padding: .95rem clamp(1rem, 2vw, 1.4rem);
   color: var(--ink);
   font-size: clamp(1rem, 1.5vw, 1.15rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.25;
   overflow-wrap: break-word;
 }
@@ -168,7 +175,7 @@ h3 { font-size: 1.2rem; }
 .catalog-filters button:hover { border-color: var(--green); }
 .catalog-filters button[aria-pressed="true"] { border-color: var(--green); background: var(--green); color: var(--white); }
 .catalog-card-copy { padding: 1rem 1.25rem; }
-.catalog-card-copy h2 { margin: 0; color: var(--ink); font: 700 1.08rem/1.3 Manrope, system-ui, sans-serif; letter-spacing: normal; }
+.catalog-card-copy h2 { margin: 0; color: var(--ink); font: 500 1rem/1.3 Manrope, system-ui, sans-serif; letter-spacing: normal; }
 .catalog-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .catalog-photo {
   width: 100%;
@@ -289,7 +296,7 @@ textarea { resize: vertical; }
 .brand-story-copy h2 { font-size: clamp(2rem, 3.6vw, 3.25rem); }
 .brand-values { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1.5rem; padding-left: 1.15rem; }
 .partner-home .assortment-action { justify-content: space-between; padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 1rem; background: var(--header-cream); }
-.partner-home .assortment-action h3 { font: 1.55rem/1.1 Georgia, serif; margin-bottom: .35rem; }
+.partner-home .assortment-action h3 { font-size: 1.55rem; line-height: 1.1; margin-bottom: .35rem; }
 .partner-steps {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -310,7 +317,7 @@ textarea { resize: vertical; }
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--green);
-  font-family: Georgia, serif;
+  font-family: var(--heading-font);
 }
 .partner-steps p { margin: .3rem 0 0; }
 .partner-home .contact { background: transparent; }

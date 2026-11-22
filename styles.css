@@ -199,10 +199,33 @@ h3 { font-size: 1.2rem; line-height: 1.25; }
 .history { background: var(--mist); }
 .timeline article { padding: 1rem 0; border-top: 1px solid var(--line); }
 .timeline p { margin-bottom: 0; }
-.terms-title { font-size: clamp(2.35rem, 5vw, 4.5rem); }
-.terms-steps { margin-block: var(--section-gap); }
-.terms-action { margin: 1.5rem 0 0; }
-.terms-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.terms-page { display: grid; gap: var(--section-gap); }
+.terms-intro { display: grid; gap: .75rem; max-width: 52rem; }
+.terms-title { margin: 0; font-size: clamp(2.35rem, 5vw, 4.5rem); }
+.terms-intro p { max-width: 34rem; margin: 0; }
+.terms-steps {
+  display: grid;
+  grid-template-columns: minmax(11rem, 1fr) minmax(0, 3fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  padding: clamp(1.15rem, 3vw, 2.5rem);
+  background: var(--mist);
+  border-radius: .85rem;
+}
+.terms-steps h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.65rem); }
+.terms-steps .partner-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem clamp(.8rem, 2vw, 1.5rem);
+  margin: 0;
+}
+@media (max-width: 54rem) {
+  .terms-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 38rem) {
+  .terms-steps .partner-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.terms-action { margin: 0; }
+.terms-grid { display: grid; gap: 1rem; }
 .terms-card { position: relative; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: stretch; overflow: hidden; border: 1px solid var(--line); border-radius: .75rem; background: var(--mist); box-shadow: 0 3px 12px rgb(34 34 34 / 8%); }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .terms-card, .benefit-link { transition: scale .25s ease, box-shadow .25s ease; }
@@ -213,7 +236,7 @@ h3 { font-size: 1.2rem; line-height: 1.25; }
   }
 }
 .terms-copy { align-self: center; padding: clamp(1rem, 4vw, 3rem); }
-.terms-copy h2 { font-size: clamp(1.75rem, 3vw, 2.8rem); }
+.terms-copy h2 { font-size: clamp(1.65rem, 2.55vw, 2.45rem); }
 .terms-copy p { margin: 0; max-width: 38rem; }
 .terms-card img { width: 100%; height: 100%; min-height: 12rem; aspect-ratio: 2 / 1; object-fit: cover; }
 form, .demo-request { background: var(--white); padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: .75rem; }

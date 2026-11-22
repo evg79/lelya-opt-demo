@@ -241,7 +241,7 @@ textarea { resize: vertical; }
 }
 .partner-home h1 { font-size: clamp(2.65rem, 4.6vw, 4.8rem); }
 .partner-home .hero-copy > p:not(.eyebrow) { max-width: 35rem; }
-.partner-home .hero-carousel { height: auto; min-height: 0; max-height: none; aspect-ratio: 25 / 16; }
+.partner-home .hero-carousel { justify-self: end; width: min(100%, 32rem); height: auto; min-height: 0; max-height: none; aspect-ratio: 25 / 16; }
 .line-icon { display: block; width: 1.8rem; height: 1.8rem; fill: none; stroke: var(--green); stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
 .partner-facts .facts {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -382,6 +382,7 @@ textarea { resize: vertical; }
 }
 @media (max-width: 56rem) {
   .partner-home .hero { grid-template-columns: 1fr; }
+  .partner-home .hero-carousel { justify-self: center; }
   .partner-home .hero-copy > p:not(.eyebrow) { max-width: none; }
   .partner-facts .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .partner-facts .facts div { border: 0; }

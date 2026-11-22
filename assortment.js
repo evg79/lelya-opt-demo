@@ -20,8 +20,8 @@ function renderCatalog() {
     card.hidden = !match || matches > limit;
   }
   count.textContent = matches
-    ? `Показано ${Math.min(limit, matches)} из ${matches}`
-    : 'В этой категории нет товаров.';
+    ? `Показано ${Math.min(limit, matches)} из ${matches}`
+    : 'В этой категории нет товаров.';
   more.hidden = matches <= limit;
 }
 

@@ -12,7 +12,7 @@
   --error-background: #f9f2ef;
   color: var(--ink);
   background: var(--cream);
-  font: 100%/1.6 Manrope, system-ui, sans-serif;
+  font: 100%/1.5 Manrope, system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
@@ -21,8 +21,9 @@ img { display: block; max-width: 100%; }
 a { color: var(--deep); text-underline-offset: .23em; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
-p { margin: 0 0 1rem; }
-h1, h2, h3 { margin: 0 0 .8rem; line-height: 1.12; color: var(--deep); }
+p { margin: 0 0 .85rem; }
+h1, h2, h3 { margin: 0 0 .75rem; line-height: 1.14; color: var(--deep); }
+h3 { line-height: 1.25; }
 h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 h1 { font-size: clamp(2.9rem, 6vw, 5.6rem); letter-spacing: -.045em; }
 h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); letter-spacing: -.035em; }
@@ -167,7 +168,7 @@ h3 { font-size: 1.2rem; }
 .catalog-filters button:hover { border-color: var(--green); }
 .catalog-filters button[aria-pressed="true"] { border-color: var(--green); background: var(--green); color: var(--white); }
 .catalog-card-copy { padding: 1rem 1.25rem; }
-.catalog-card-copy h2 { margin-bottom: .4rem; color: var(--ink); font: 700 1.08rem/1.35 Manrope, system-ui, sans-serif; letter-spacing: normal; }
+.catalog-card-copy h2 { margin: 0; color: var(--ink); font: 700 1.08rem/1.3 Manrope, system-ui, sans-serif; letter-spacing: normal; }
 .catalog-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .catalog-photo {
   width: 100%;
@@ -261,6 +262,18 @@ textarea { resize: vertical; }
 .benefits-grid .line-icon { margin-bottom: .75rem; }
 .business-grid h3, .benefits-grid h3 { font-size: 1rem; }
 .business-grid p, .benefits-grid p { margin: 0; }
+@supports (grid-template-rows: subgrid) {
+  .business-grid > article, .benefits-grid > article, .benefits-grid > .benefit-link, .partner-steps > li {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: .55rem;
+    align-items: start;
+  }
+  .business-grid .line-icon { margin: 0 auto; }
+  .benefits-grid .line-icon, .business-grid h3, .benefits-grid h3,
+  .partner-steps li::before, .partner-steps li p { margin: 0; }
+}
 .brand-story, .shelf-story, .trust-story {
   display: grid;
   grid-template-columns: 1fr 1fr;

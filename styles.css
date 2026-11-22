@@ -47,8 +47,8 @@ h3 { font-size: 1.2rem; line-height: 1.25; }
 .mobile-menu { display: none; }
 .button, .header nav a { border-radius: 2rem; }
 .header nav a { padding: .45rem .75rem; border: 1px solid transparent; text-decoration: none; font-weight: 700; }
-.header nav a:hover { background: var(--mist); }
-.header nav a[aria-current] { border-color: var(--line); background: var(--white); }
+.header nav a:not([aria-current]):is(:hover, :focus-visible) { background: var(--mist); }
+.header nav a[aria-current="page"] { border-color: var(--green); background: var(--green); color: var(--white); }
 .button { display: inline-flex; align-items: center; justify-content: center; padding: .85rem 1.35rem; border: 1px solid transparent; background: var(--green); color: var(--white); font: inherit; font-weight: 800; text-decoration: none; cursor: pointer; }
 .button:hover { text-decoration: underline; }
 .small { padding: .55rem 1rem; }

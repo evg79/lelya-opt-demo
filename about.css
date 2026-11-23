@@ -179,11 +179,8 @@
   height: auto;
   aspect-ratio: 5 / 2;
   object-fit: cover;
-  margin-bottom: .8rem;
 }
-.about-production-scenes h3,
 .about-quality h3 { font-size: clamp(1.35rem, 2.3vw, 2rem); }
-.about-production-scenes p,
 .about-quality p { margin-bottom: 0; }
 
 .about-quality {

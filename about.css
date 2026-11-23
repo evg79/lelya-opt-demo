@@ -9,15 +9,7 @@
 
 .about-page #history { display: block; padding: 0; }
 
-.about-page main :is(h1, h2, h3) {
-  font-family: var(--heading-font);
-  color: inherit;
-}
-
-.about-page main a:not(.button) {
-  color: inherit;
-  font-weight: 700;
-}
+.about-story-copy a { font-weight: 700; }
 
 .about-hero-inner {
   display: grid;
@@ -127,12 +119,17 @@
 
 .about-page #history > .about-close {
   background: linear-gradient(#211e17a6, #211e17a6), url("assets/about/urals.jpg") center 54% / cover #514333;
-  color: white;
   text-align: center;
   padding-block: clamp(3rem, 7vw, 7rem);
 }
 .about-close h2 { font-size: clamp(2rem, 4vw, 3.7rem); }
-.about-close .button { margin-top: .6rem; background: var(--about-paper); color: var(--about-ink); }
+.about-close > .wrap {
+  width: min(42rem, calc(100% - 2rem));
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border-radius: .75rem;
+  background: var(--about-paper);
+}
+.about-close .button { margin-top: .6rem; }
 
 @media (max-width: 58rem) {
   .about-page #history > .about-story { grid-template-columns: repeat(2, minmax(0, 1fr)); }

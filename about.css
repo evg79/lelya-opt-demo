@@ -2,7 +2,6 @@
   --about-ink: #223020;
   --about-paper: #f8f6f0;
   --about-line: #ded9cc;
-  --about-serif: Georgia, "Times New Roman", serif;
   background: var(--about-paper);
   color: var(--about-ink);
 }
@@ -68,9 +67,12 @@
   padding: 1.5rem;
   background: #eeeadf;
   text-align: center;
-  font: italic clamp(1.3rem, 2.2vw, 2rem)/1.35 var(--about-serif);
 }
-.about-quote p { margin: 0; }
+.about-quote p {
+  margin: 0;
+  color: var(--deep);
+  font: 500 clamp(1.3rem, 2.2vw, 2rem)/1.35 var(--heading-font);
+}
 .about-page svg { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
 .about-quote svg { width: 4.5rem; color: #827b56; }
 

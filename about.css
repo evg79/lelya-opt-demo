@@ -156,3 +156,44 @@
   .about-product { height: auto; min-height: 0; }
   .about-values li + li { border-inline-start: 0; border-top: 1px solid var(--about-line); }
 }
+
+.about-care { background: #eeeadf; }
+.about-page #history > .about-care,
+.about-page #history > .about-production { padding-block: clamp(2rem, 4vw, 3.5rem); }
+
+.about-care-inner,
+.about-production-scenes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.9rem, 3vw, 2.5rem);
+}
+
+.about-care h2,
+.about-production h2 { font-size: clamp(2rem, 3.5vw, 3.25rem); }
+.about-care p { max-width: 57ch; }
+.about-care p:last-child { margin-bottom: 0; }
+.about-production-intro p { max-width: 70ch; }
+.about-production-scenes { margin-top: 1.5rem; }
+.about-production-scenes img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 2;
+  object-fit: cover;
+  margin-bottom: .8rem;
+}
+.about-production-scenes h3,
+.about-quality h3 { font-size: clamp(1.35rem, 2.3vw, 2rem); }
+.about-production-scenes p,
+.about-quality p { margin-bottom: 0; }
+.about-production-caption { margin: .9rem 0 0; font-size: .85rem; }
+
+.about-quality {
+  border-inline-start: 3px solid #657857;
+  background: #eeeadf;
+  margin-top: 1.5rem;
+  padding: 1.1rem clamp(1rem, 3vw, 2rem);
+}
+
+@media (max-width: 40rem) {
+  .about-care-inner, .about-production-scenes { grid-template-columns: 1fr; }
+}

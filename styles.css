@@ -481,3 +481,26 @@ textarea { resize: vertical; }
   :root { --subheading-scale: 1.5; }
   h2, h3 { overflow-wrap: anywhere; }
 }
+
+.catalog-category-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-block: 1.35rem;
+}
+.catalog-category-links .button { min-height: 2.75rem; }
+
+.terms-faq dl {
+  display: grid;
+  gap: .9rem;
+  margin: 0;
+}
+.terms-faq dl > div {
+  padding: 1rem clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  background: var(--mist);
+}
+.terms-faq dt { color: var(--deep); font-weight: 800; }
+.terms-faq dd { margin: .3rem 0 0; }
+#contact address + p { margin-top: .7rem; }

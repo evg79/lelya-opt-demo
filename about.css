@@ -185,7 +185,6 @@
 .about-quality h3 { font-size: clamp(1.35rem, 2.3vw, 2rem); }
 .about-production-scenes p,
 .about-quality p { margin-bottom: 0; }
-.about-production-caption { margin: .9rem 0 0; font-size: .85rem; }
 
 .about-quality {
   border-inline-start: 3px solid #657857;

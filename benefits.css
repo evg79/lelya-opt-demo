@@ -3,7 +3,7 @@
 }
 
 .benefits-process > h2 {
-  font-size: clamp(1.95rem, 4vw, 3.5rem);
+  --subheading-size: clamp(1.95rem, 4vw, 3.5rem);
   margin-bottom: clamp(1rem, 2.5vw, 1.75rem);
 }
 
@@ -41,7 +41,7 @@
 }
 
 .benefits-process-copy h3 {
-  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  --subheading-size: clamp(1.55rem, 3vw, 2.4rem);
   overflow-wrap: break-word;
 }
 

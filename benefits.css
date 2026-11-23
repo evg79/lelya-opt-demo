@@ -1,0 +1,63 @@
+.benefits-process {
+  margin-top: var(--section-gap);
+}
+
+.benefits-process > h2 {
+  font-size: clamp(1.95rem, 4vw, 3.5rem);
+  margin-bottom: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.benefits-process-list {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+.benefits-process-item {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  padding-top: clamp(1rem, 2vw, 1.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.benefits-process-item:nth-child(even) img {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.benefits-process-item:nth-child(even) .benefits-process-copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.benefits-process-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 2;
+  object-fit: cover;
+  border-radius: .75rem;
+  background: var(--mist);
+}
+
+.benefits-process-copy h3 {
+  font-size: clamp(1.55rem, 3vw, 2.4rem);
+  overflow-wrap: break-word;
+}
+
+.benefits-process-copy p {
+  max-width: 58ch;
+  margin-bottom: 0;
+}
+
+@media (max-width: 44rem) {
+  .benefits-process-item {
+    grid-template-columns: 1fr;
+    gap: .95rem;
+  }
+
+  .benefits-process-item:nth-child(even) :is(img, .benefits-process-copy) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

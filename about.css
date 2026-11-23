@@ -10,7 +10,7 @@
 .about-page #history { display: block; padding: 0; }
 
 .about-page main :is(h1, h2, h3) {
-  font-family: var(--about-serif);
+  font-family: var(--heading-font);
   color: inherit;
 }
 
@@ -103,7 +103,6 @@
   object-fit: cover;
   margin-bottom: 1rem;
 }
-.about-topics article:first-child img { object-position: left; }
 .about-topics article:last-child img { object-position: 78% center; }
 .about-topics h2 { font-size: clamp(1.6rem, 2.5vw, 2.5rem); }
 .about-topics p { margin: 0; max-width: 54ch; }
@@ -157,4 +156,3 @@
   .about-product { height: auto; min-height: 0; }
   .about-values li + li { border-inline-start: 0; border-top: 1px solid var(--about-line); }
 }
-
